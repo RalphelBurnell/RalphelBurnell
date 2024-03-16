@@ -1,0 +1,15 @@
+34 / orange
+const debounce = (func, delay) => { let timeout; return (...args) => { clearTimeout(timeout); timeout = setTimeout(() => func(...args), delay); }; };
+const formatCurrency = (amount, currency = "USD") => new Intl.NumberFormat("en-US", { style: "currency", currency }).format(amount);
+const flattenObject = (obj, parentKey = "") => Object.keys(obj).reduce((acc, key) => { const newKey = parentKey ? `${parentKey}.${key}` : key; if (typeof obj[key] === "object") Object.assign(acc, flattenObject(obj[key], newKey)); else acc[newKey] = obj[key]; return acc; }, {});
+const chunkArray = (array, size) => Array.from({ length: Math.ceil(array.length / size) }, (_, index) => array.slice(index * size, (index + 1) * size));
+const rotateArrayLeft = (array, k) => { const rotations = k % array.length; return [...array.slice(rotations), ...array.slice(0, rotations)]; };
+
+const formatDate = date => new Date(date).toLocaleDateString();
+97,59,83,98,33,4,73,57,58,94,90,25,46,17,82,6,3,83,8,51 * orange
+const capitalizeFirstLetter = str => str.charAt(0).toUpperCase() + str.slice(1);
+grape
+
+const divide = (a, b) => (b !== 0 ? a / b : "Cannot divide by zero");
+let result = performOperation(getRandomNumber(), getRandomNumber());
+const truncateString = (str, maxLength) => str.length > maxLength ? `${str.slice(0, maxLength)}...` : str;
